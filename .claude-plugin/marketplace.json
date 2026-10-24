@@ -1,0 +1,14 @@
+{
+  "name": "framelane",
+  "description": "The FrameLane plugin for Claude Code: agent skills for making video, and the MCP server they use.",
+  "owner": {
+    "name": "FrameLane"
+  },
+  "plugins": [
+    {
+      "name": "framelane",
+      "source": "./",
+      "description": "FrameLane's agent skills: build, preview, review, hand off and export versioned video projects through the FrameLane MCP server."
+    }
+  ]
+}

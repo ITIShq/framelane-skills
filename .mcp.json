@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "framelane": {
+      "type": "http",
+      "url": "https://mcp.framelane.io/mcp"
+    }
+  }
+}

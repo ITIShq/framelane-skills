@@ -1,0 +1,11 @@
+{
+  "name": "framelane",
+  "version": "2026.10.24+e5d36e93",
+  "description": "FrameLane's agent skills: build, preview, review, hand off and export versioned video projects through the FrameLane MCP server.",
+  "author": {
+    "name": "FrameLane"
+  },
+  "homepage": "https://framelane.io",
+  "repository": "https://github.com/ITIShq/framelane-skills",
+  "license": "MIT"
+}
