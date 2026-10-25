@@ -1,4 +1,4 @@
-<!-- Copied from api/mcp/skills/craft/color-and-brand.md (sha256 7d90c7845f4807baeb99e54a3397d97ca88121283d7638172877095ff60bf988) by scripts/build_skills_bundle.py. Edit the source, not this copy. -->
+<!-- Copied from api/mcp/skills/craft/color-and-brand.md (sha256 f1ebc69ea5f98fdfc132a69b45dd0a9e2ee3d62d0b3e71f9ea85edd1cdb3bcec) by scripts/build_skills_bundle.py. Edit the source, not this copy. -->
 
 # Color and brand
 
@@ -39,7 +39,7 @@ This is the one palette the workflows share when the brief names no brand and no
 
 ## Color on footage and stills
 
-- Grade video and images with their adjustment fields: `brightness`, `contrast`, `saturation`, `exposure`, `temperature`, `tint` and `vignette`. Named looks are `effects`; read the `effects` section for the list.
+- Grade video and images with their adjustment fields: `brightness`, `contrast`, `saturation`, `exposure`, `temperature`, `tint` and `vignette`. Named looks are `effects`; read the `effects` section for the list. The adjustment fields apply after `effects`, so `saturation` at -100 removes a tint an effect such as `sepia` adds.
 - `color_overlay` is rejected. To tint media, stack a `shape` with a translucent `fill` above it and set a `blend_mode` such as `multiply` or `screen`.
 - `lut_url` is applied on video only.
 

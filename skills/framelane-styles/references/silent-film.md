@@ -9,7 +9,7 @@ Early cinema before synchronized sound: grainy black-and-white footage under a s
 ## Making it in FrameLane
 
 - Set `frame_rate` to 24.
-- Grade each clip with `saturation` at -100, `contrast` around 15 and `vignette` around 45, then add `sepia` and `add_grain` to its `effects`.
+- Give each clip `sepia` at 100 and `add_grain` in its `effects`, then grade it with `saturation` around -60, `contrast` around 15 and `vignette` around 45. The grade applies after the effects, so -60 leaves the light sepia tone and -100 would erase it.
 - Silence the clips with `muted`: the period had no synchronized sound, and sped-up speech sounds wrong. A piano bed, if wanted, is an audio element from the person's own library.
 - Join clips placed back to back with an `iris` or `dip_to_black` transition. Transitions join video elements only, so a card simply appears between shots.
 - A card is centered text on the black background, framed by two stroked rectangles.
@@ -18,6 +18,7 @@ Early cinema before synchronized sound: grainy black-and-white footage under a s
 
 - Flicker faked with `strobe_light`: it reads as a fault and can trouble viewers who are sensitive to flashing. Let the grain carry the texture.
 - Crushed blacks that hide faces: check a dark shot in a server frame and lower `contrast` before adding more grain.
+- Plain gray where sepia was meant: `saturation` at -100 strips the tone `sepia` adds. Keep it near -60.
 - A modern sans serif, a lower third or a color accent: each of these breaks the period.
 - Wordy cards: split a long line across two cards.
 
@@ -48,15 +49,15 @@ A complete ten-second example:
       "type": "video", "id": "shot-1", "source_url": "https://cdn-assets.framelane.io/shared/videos/clip1.mp4",
       "time": 4, "in_point": 0, "out_point": 3.6, "speed": 1.2, "muted": true,
       "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-      "saturation": -100, "contrast": 15, "vignette": 45,
-      "effects": [{"type": "sepia", "intensity": 35}, {"type": "add_grain", "intensity": 45}]
+      "saturation": -60, "contrast": 15, "vignette": 45,
+      "effects": [{"type": "sepia", "intensity": 100}, {"type": "add_grain", "intensity": 45}]
     },
     {
       "type": "video", "id": "shot-2", "source_url": "https://cdn-assets.framelane.io/shared/videos/clip1.mp4",
       "time": 7, "in_point": 6, "out_point": 9.6, "speed": 1.2, "muted": true,
       "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-      "saturation": -100, "contrast": 15, "vignette": 45,
-      "effects": [{"type": "sepia", "intensity": 35}, {"type": "add_grain", "intensity": 45}]
+      "saturation": -60, "contrast": 15, "vignette": 45,
+      "effects": [{"type": "sepia", "intensity": 100}, {"type": "add_grain", "intensity": 45}]
     }
   ],
   "transitions": [{"type": "iris", "duration": 0.8, "from_id": "shot-1", "to_id": "shot-2"}]

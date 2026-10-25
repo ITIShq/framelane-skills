@@ -1,4 +1,4 @@
-<!-- Copied from api/mcp/skills/craft/speech-editing.md (sha256 3f029ba7daee2ecd6ef7b0c8a10c8e1dab79cfbef137655a6b6a2dcc56a9b3d0) by scripts/build_skills_bundle.py. Edit the source, not this copy. -->
+<!-- Copied from api/mcp/skills/craft/speech-editing.md (sha256 a2bbf5186d6db4c282fe330d1aa87de4a94552ab0c6f09ce607c4dae9ccd0e7b) by scripts/build_skills_bundle.py. Edit the source, not this copy. -->
 
 # Speech editing
 
@@ -18,7 +18,7 @@ For cutting recorded speech by its transcript: which words go, where each cut la
 - Transcribe with `disfluencies` on, so fillers such as "um" come back as timed words with an index of their own, and with `speaker_labels` on when more than one person talks. A word's index is its position in the result's word list, counted from 0.
 - In `words`, `transcript_task_id` names that task, and `remove` or `keep` lists index ranges `[i, j]`: both ends included, in ascending order, each word once. An index is a whole number; the server refuses a string rather than guessing what it meant.
 - The server converts the transcript's millisecond timings to source seconds, clamps words the recogniser let overlap, and turns each range into a padded source range (see Where cuts land).
-- `ids` lists the targets: the recording's video and, when its sound is a separate audio element, that element too, so both are cut in step. A target is cut only inside its own source window; a range outside it is skipped and reported.
+- `ids` lists the targets: the recording's video and, when its sound is a separate audio element, that element too, so both are cut in step. A target is cut only inside its own source window; a range outside every target is skipped and reported once, on the first target.
 - `ripple` `all`, the default, closes every gap: later elements move up, an overlay that spans a cut gets shorter, caption words are re-timed and the request `duration` shrinks. A caption only loses the words that were cut, and goes once none are left, but any other element that would sit wholly inside a removed range makes the op fail unless `contained` is `remove`.
 - `remove` in source seconds is for a sound with no word index, such as a cough or a knock on the microphone. Take its edges from the word times on either side, and give it a `category` and a `reason`; both come back in the report. `keep`, in seconds or as word ranges, inverts the selection.
 - Every new join gets a short audio fade, `join_fade`, 15 ms unless you change it, so a cut through a waveform does not click.
