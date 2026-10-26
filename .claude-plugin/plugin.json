@@ -1,6 +1,6 @@
 {
   "name": "framelane",
-  "version": "2026.10.25+6d5e7acf",
+  "version": "2026.10.26+ad8f4b59",
   "description": "FrameLane's agent skills: build, preview, review, hand off and export versioned video projects through the FrameLane MCP server.",
   "author": {
     "name": "FrameLane"

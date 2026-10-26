@@ -1,4 +1,4 @@
-<!-- Copied from api/mcp/skills/craft/typography.md (sha256 d0803f514f774b3b10eb0f88b25146b45b593043d149966759f3bd5e7130fd3f) by scripts/build_skills_bundle.py. Edit the source, not this copy. -->
+<!-- Copied from api/mcp/skills/craft/typography.md (sha256 863df4779346e270e967a86cfdf152fa49aee99c918512463b9a61ac6fba4127) by scripts/build_skills_bundle.py. Edit the source, not this copy. -->
 
 # Typography
 
@@ -55,6 +55,6 @@ A 96 px headline on a 1920-wide canvas keeps its share of the frame at 1080 wide
 - The `color` and `box` word-animation styles paint with `background_color` and require it.
 - `text_decoration` renders only `none`. Underline single words through `words` with a `style`, and draw a strike-through as a thin shape.
 - `tracking` is letter spacing in pixels and `leading` is line height as a multiple of the font size. `tabular_numbers` stops a `counter` from jittering.
-- Text `opacity` never reaches the renderer: fade text with a `fade` motion.
+- Text `opacity` fades the whole text, plate and outline included. Animate a fade with a `fade` motion.
 - Line breaks: check them in server frames, because a browser preview can shape text differently. Put a newline in `text` rather than letting a headline break before a lone last word.
 - Scripts other than Latin have not been checked in a hosted render; treat them as unverified until you inspect the frames.

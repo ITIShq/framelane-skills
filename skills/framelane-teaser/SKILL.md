@@ -45,7 +45,7 @@ Use `fade` for a quiet announcement and `slide_up` for a modest directional reve
 
 For a stronger campaign style, `blur` is a text entrance with `evaporate` as its exit. It is not interchangeable with element-only presets. A product image may use `ken_burns_in` for a subtle zoom; inspect the crop at both ends. Do not attach several competing animation routes to the same text. Timed caption animation, text animation presets, and motion lists require an intentional choice, not a pile of independent effects.
 
-To fade text, use motion; static text opacity is not a dependable renderer control. For a translucent text backing, enable background and use an eight-digit background color rather than relying on background opacity. Color alone does not enable a text plate. A separate shape is often clearer for a large card. Transitions connect videos, so they are not a substitute for fading a shape or title. Do not put unsupported easing expectations into a preset: its curve is baked in. Use the custom animation schema only when the preset cannot express the required behavior.
+To fade text in or out, use motion; a static `opacity` dims the whole text, plate included. For a translucent text backing, enable background and use an eight-digit background color rather than relying on background opacity. Color alone does not enable a text plate. A separate shape is often clearer for a large card. Transitions connect videos, so they are not a substitute for fading a shape or title. Do not put unsupported easing expectations into a preset: its curve is baked in. Use the custom animation schema only when the preset cannot express the required behavior.
 
 ## Adapt the format deliberately
 
